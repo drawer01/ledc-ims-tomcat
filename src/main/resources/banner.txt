@@ -1,0 +1,11 @@
+${AnsiColor.BRIGHT_GREEN}
+.__    ___________ ________    _________  
+|  |   \_   _____/ \______ \   \_   ___ \ 
+|  |    |    __)_   |    |  \  /    \  \/ 
+|  |__  |        \  |    `   \ \     \____
+|____/ /_______  / /_______  /  \______  /
+               \/          \/          \/                                   
+${AnsiColor.BRIGHT_GREEN}
+Application Version: ${application.version}${application.formatted-version}
+Spring Boot Version: ${spring-boot.version}${spring-boot.formatted-version}
+ 
