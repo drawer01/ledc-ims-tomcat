@@ -18,12 +18,12 @@ public class SwaggerConfig {
     public Docket createRestApi(){
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
+                .enableUrlTemplating(false)
                 .select()
                 // 当前包路径
                 .apis(RequestHandlerSelectors.basePackage("com.ledc.ims.Api"))
                 .paths(PathSelectors.any())
-                .build()
-                ;
+                .build();
 
     }
     //构建api文档的详细信息函数

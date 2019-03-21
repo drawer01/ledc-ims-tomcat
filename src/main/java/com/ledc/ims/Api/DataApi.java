@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api")
 public class DataApi {
-    @RequestMapping("/login.json")
+    @RequestMapping("/login")
     public String hello(){
-        return "Api测试";
+        return "Api Test>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>";
     }
 }

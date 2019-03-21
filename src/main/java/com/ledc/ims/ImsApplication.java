@@ -32,7 +32,7 @@ public class ImsApplication {
         registration.setLoadOnStartup(1);
         //registration.getUrlMappings().clear();
         //registration.addUrlMappings("/rest/*");
-        registration.addUrlMappings("*.json");
+        registration.addUrlMappings("/rest/*");
         return registration;
     }
 
