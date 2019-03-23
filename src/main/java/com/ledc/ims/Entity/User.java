@@ -1,21 +1,33 @@
 package com.ledc.ims.Entity;
 
 import lombok.Data;
-
 import javax.persistence.*;
-import java.util.Date;
 
-// This tells Hibernate to make a table out of this class
+/**
+ * @author Sellin.chu
+ * @version 1.0.0
+ *
+ * <p>用户实体类</p>
+ */
 @Entity
 @Data
-@Table(name="t_User")
+@Table(name="user")
 public class User {
-    private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    private int id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
+    private Integer id;
+
+    @Column(name = "username")
     private String username;
-    private int age;
-    private Date ctm;
+
+    @Column(name = "password")
+    private String password;
+
+    @Column(name = "role")
+    private String role;
+
+    // getter and setter...
+
 
 }

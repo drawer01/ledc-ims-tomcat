@@ -12,7 +12,7 @@ import javax.persistence.EntityManagerFactory;
 import java.beans.PropertyVetoException;
 
 @Configuration
-@EnableJpaRepositories
+@EnableJpaRepositories(basePackages ="com.ledc.ims.Repository")
 public class JpaConfig {
 
     @Bean
