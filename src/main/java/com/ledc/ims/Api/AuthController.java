@@ -1,7 +1,9 @@
-package com.ledc.ims.Web;
+package com.ledc.ims.Api;
 
+import ch.qos.logback.classic.Logger;
 import com.ledc.ims.Entity.User;
 import com.ledc.ims.Repository.UserRepository;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,7 +16,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
-
+    private final Logger logger = (Logger) LoggerFactory.getLogger(getClass());
     private UserRepository userRepository;
     private BCryptPasswordEncoder bCryptPasswordEncoder;
     @Autowired
@@ -34,7 +36,9 @@ public class AuthController {
         user.setPassword(bCryptPasswordEncoder.encode(registerUser.get("password")));
         user.setRole("ROLE_USER");
         User save = userRepository.save(user);
+        logger.info(save.toString());
         return save.toString();
+
     }
 
 }

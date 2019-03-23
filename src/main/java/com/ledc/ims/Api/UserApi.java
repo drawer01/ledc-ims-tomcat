@@ -14,7 +14,7 @@ import java.util.*;
 import static java.util.Collections.synchronizedMap;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/v2/api-ims/")
 public class UserApi {
     // 创建线程安全的Map
     private static Map<Integer, User> users = synchronizedMap(new HashMap<>());

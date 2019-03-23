@@ -27,12 +27,12 @@ public class ImsApplication {
                 = new DispatcherServlet(applicationContext);
         //用ServletRegistrationBean包装servlet
         ServletRegistrationBean<DispatcherServlet> registration
-                = new ServletRegistrationBean<>(rest_dispatcherServlet,"/rest/*");
+                = new ServletRegistrationBean<>(rest_dispatcherServlet,"/v2/api-ims/*");
         registration.setName("rest");
         registration.setLoadOnStartup(1);
         //registration.getUrlMappings().clear();
         //registration.addUrlMappings("/rest/*");
-        registration.addUrlMappings("/rest/*");
+        registration.addUrlMappings("/v2/api-ims/*");
         return registration;
     }
 

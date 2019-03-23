@@ -4,9 +4,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/v2/api-ims")
 public class DataApi {
-    @RequestMapping("/login")
+    @RequestMapping("/home")
     public String hello(){
         return "Api Test>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>";
     }

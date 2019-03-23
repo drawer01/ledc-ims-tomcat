@@ -1,4 +1,4 @@
-package com.ledc.ims.Web;
+package com.ledc.ims.Api;
 
 import org.springframework.web.bind.annotation.*;
 
