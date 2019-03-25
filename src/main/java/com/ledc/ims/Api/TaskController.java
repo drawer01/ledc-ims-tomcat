@@ -3,7 +3,7 @@ package com.ledc.ims.Api;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/tasks")
+@RequestMapping("/v2/api-ims/tasks")
 public class TaskController {
     @GetMapping
     public String listTasks(){

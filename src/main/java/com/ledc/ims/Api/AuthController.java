@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/v2/api-ims/auth")
 public class AuthController {
     private final Logger logger = (Logger) LoggerFactory.getLogger(getClass());
     private UserRepository userRepository;

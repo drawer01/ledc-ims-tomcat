@@ -31,6 +31,7 @@ public class JwtAuthorizationFilter extends BasicAuthenticationFilter {
             return;
         }
         // 如果请求头中有token，则进行解析，并且设置认证信息
+
         SecurityContextHolder.getContext().setAuthentication(getAuthentication(tokenHeader));
         super.doFilterInternal(request, response, chain);
     }
@@ -39,6 +40,7 @@ public class JwtAuthorizationFilter extends BasicAuthenticationFilter {
     private UsernamePasswordAuthenticationToken getAuthentication(String tokenHeader) {
         String token = tokenHeader.replace(JwtTokenUtils.TOKEN_PREFIX, "");
         String username = JwtTokenUtils.getUsername(token);
+        //String role = JwtTokenUtils.getUserRole(token);
         if (username != null){
             return new UsernamePasswordAuthenticationToken(username, null, new ArrayList<>());
         }

@@ -9,7 +9,7 @@ public class ImsWebAppInitializer extends AbstractAnnotationConfigDispatcherServ
 	@Override
 	protected String[] getServletMappings() {
 
-		return new String[] {"/*.html"};
+		return new String[] {};
 	}
 	@Override
 	protected Class<?>[] getRootConfigClasses (){
