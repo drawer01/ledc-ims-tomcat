@@ -1,4 +1,4 @@
-package com.ledc.ims.Filter;
+package com.ledc.ims.Security;
 
 import com.ledc.ims.Utils.JwtTokenUtils;
 import org.springframework.beans.factory.annotation.Autowired;

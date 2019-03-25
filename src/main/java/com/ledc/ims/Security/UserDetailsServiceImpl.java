@@ -1,4 +1,4 @@
-package com.ledc.ims.ServiceImpl;
+package com.ledc.ims.Security;
 
 import com.ledc.ims.Entity.User;
 import com.ledc.ims.Repository.UserRepository;

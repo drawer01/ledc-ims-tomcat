@@ -1,10 +1,10 @@
 package com.ledc.ims.config;
 
-import com.ledc.ims.Filter.JwtAuthenticationTokenFilter;
-import com.ledc.ims.ServiceImpl.JwtAccessDeniedHandle;
-import com.ledc.ims.ServiceImpl.JwtAuthenticationFailureHandler;
-import com.ledc.ims.ServiceImpl.JwtAuthenticationSuccessHandler;
-import com.ledc.ims.ServiceImpl.JwtLogoutSuccessHandler;
+import com.ledc.ims.Security.JwtAuthenticationTokenFilter;
+import com.ledc.ims.Security.JwtAccessDeniedHandle;
+import com.ledc.ims.Security.JwtAuthenticationFailureHandler;
+import com.ledc.ims.Security.JwtAuthenticationSuccessHandler;
+import com.ledc.ims.Security.JwtLogoutSuccessHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -86,8 +86,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 //.and()
                 //.rememberMe()
                 .and()
-               // .addFilter(new JwtAuthenticationFilter(authenticationManager()))
-               // .addFilter(new JwtAuthorizationFilter(authenticationManager()))
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .formLogin()
